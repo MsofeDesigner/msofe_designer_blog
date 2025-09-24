@@ -3,40 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Msofe Designer - Let us design your future</title>
-    <meta name="description" content="Professional graphic design services in Tanzania. Logo design, branding, web design, and print materials. Where vision meets reality.">
-    <meta name="keywords" content="graphic design, logo design, branding, web design, Tanzania, Morogoro, business cards, social media graphics">
-    <meta name="author" content="Msofe Designer">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://msofedesigner.com/">
-    <meta property="og:title" content="Msofe Designer - Let us design your future">
-    <meta property="og:description" content="Professional graphic design services in Tanzania. Logo design, branding, web design, and print materials.">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://msofedesigner.com/">
-    <meta property="twitter:title" content="Msofe Designer - Let us design your future">
-    <meta property="twitter:description" content="Professional graphic design services in Tanzania. Logo design, branding, web design, and print materials.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
+    <title>Professional Landing Page</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        /* Custom animations */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #333;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .features {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -48,1364 +181,91 @@
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
             }
-            50% {
-                transform: translateY(-10px);
+
+            .nav-links {
+                display: none;
             }
-        }
 
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
+            .video-container {
+                margin: 0 20px;
+                padding: 20px;
             }
-            50% {
-                transform: scale(1.05);
+
+            .features-grid {
+                grid-template-columns: 1fr;
             }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 53%, 80%, 100% {
-                transform: translate3d(0, 0, 0);
-            }
-            40%, 43% {
-                transform: translate3d(0, -8px, 0);
-            }
-            70% {
-                transform: translate3d(0, -4px, 0);
-            }
-            90% {
-                transform: translate3d(0, -2px, 0);
-            }
-        }
-
-        .animate-fadeInUp {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .animate-pulse-custom {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-bounce-custom {
-            animation: bounce 2s infinite;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #8B5CF6, #3B82F6);
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #7C3AED, #2563EB);
-        }
-
-        /* Line clamp utility */
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Hidden class */
-        .hidden {
-            display: none;
-        }
-
-        /* Backdrop blur */
-        .backdrop-blur-md {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
         }
     </style>
 </head>
-<body class="bg-white">
-    <!-- Top Contact Bar -->
-    <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div class="flex items-center space-x-4 mb-2 sm:mb-0">
-                <a href="mailto:msofedesigner@gmail.com" class="hover:text-purple-200 transition-colors">
-                    msofedesigner@gmail.com
-                </a>
-                <span class="hidden sm:inline">|</span>
-                <a href="tel:+255688010595" class="hover:text-purple-200 transition-colors">
-                    +255 688 010 595
-                </a>
-            </div>
-            <div class="flex items-center space-x-3">
-                <span class="text-purple-200">Follow Us:</span>
-                <a href="https://facebook.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 transition-colors transform hover:scale-110">
-                    <i data-lucide="facebook" class="w-4 h-4"></i>
-                </a>
-                <a href="https://instagram.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 transition-colors transform hover:scale-110">
-                    <i data-lucide="instagram" class="w-4 h-4"></i>
-                </a>
-                <a href="https://twitter.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 transition-colors transform hover:scale-110">
-                    <i data-lucide="twitter" class="w-4 h-4"></i>
-                </a>
-                <a href="https://linkedin.com/company/msofedesigner" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 transition-colors transform hover:scale-110">
-                    <i data-lucide="linkedin" class="w-4 h-4"></i>
-                </a>
-                <a href="https://youtube.com/@msofedesigner" target="_blank" rel="noopener noreferrer" class="hover:text-purple-200 transition-colors transform hover:scale-110">
-                    <i data-lucide="youtube" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Main Header -->
-    <header class="fixed top-8 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                        MD
-                    </div>
-                    <div class="ml-3">
-                        <div class="font-bold text-xl text-gray-900">Msofe Designer</div>
-                        <div class="text-sm text-gray-500">Where vision meets reality</div>
-                    </div>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">Services</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium">Contact</a>
-                    
-                    <!-- Quick Contact Buttons -->
-                    <div class="flex items-center space-x-2">
-                        <a href="tel:+255688010595" class="bg-green-500 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-green-600 transition-colors">
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors">
-                            WhatsApp
-                        </a>
-                    </div>
-                    
-                    <!-- Language Switcher -->
-                    <div class="relative">
-                        <button onclick="toggleLanguage()" class="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                            <i data-lucide="globe" class="w-5 h-5"></i>
-                            <span class="uppercase font-medium" id="currentLang">EN</span>
-                        </button>
-                        <div id="languageDropdown" class="hidden absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg py-1 z-10 border">
-                            <button onclick="setLanguage('en')" class="block w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">EN</button>
-                            <button onclick="setLanguage('sw')" class="block w-full text-left px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100">SW</button>
-                        </div>
-                    </div>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-gray-700 hover:text-purple-600 transition-colors duration-200">
-                    <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
-                </button>
-            </div>
-
-            <!-- Mobile Navigation -->
-            <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-200">
-                <nav class="flex flex-col space-y-4">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 text-left font-medium">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 text-left font-medium">About</a>
-                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 text-left font-medium">Services</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors duration-200 text-left font-medium">Contact</a>
-                    
-                    <!-- Mobile Quick Contact -->
-                    <div class="flex flex-col space-y-2 pt-2 border-t border-gray-100">
-                        <a href="tel:+255688010595" class="bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600 transition-colors text-center">
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 transition-colors text-center">
-                            WhatsApp
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">YourBrand</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-blue-50 pt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Content -->
-                <div class="text-center lg:text-left">
-                    <div class="animate-fadeInUp">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4" id="heroTitle">
-                            Msofe Designer
-                        </h1>
-                        <p class="text-2xl md:text-3xl text-purple-600 font-semibold mb-4" id="heroSlogan">
-                            Let us design your future
-                        </p>
-                        <p class="text-lg text-gray-600 mb-2" id="heroTagline">
-                            Where vision meets reality
-                        </p>
-                        <p class="text-gray-600 mb-8 max-w-lg mx-auto lg:mx-0" id="heroDescription">
-                            Professional graphic design services to elevate your brand and bring your creative visions to life.
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                            <a href="#services" class="group bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
-                                <span id="getStarted">Get Started</span>
-                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"></i>
-                            </a>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to Our Professional Service</h1>
+            <p>Delivering excellence through innovation and dedication</p>
+            <a href="#contact" class="cta-button">Get Started Today</a>
+        </div>
+    </section>
 
-                            <!-- Msofe Designer Portfolio Website -->
-                            <a href="https://msofe-designer-portfolio.netlify.app/" target="_blank" class="group border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
-                                <i data-lucide="play" class="w-5 h-5 group-hover:scale-110 transition-transform duration-300"></i>
-                                <span id="viewPortfolio">View Portfolio</span>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Preview -->
-                <div class="relative">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="space-y-4">
-                            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-float">
-                                <div class="aspect-square bg-gradient-to-br from-purple-400 to-pink-400 rounded-xl mb-3 flex items-center justify-center">
-                                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                                        <div class="w-8 h-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded"></div>
-                                    </div>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Logo Design</h3>
-                                <p class="text-sm text-gray-600">Brand Identity</p>
-                            </div>
-                            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-float" style="animation-delay: 0.2s">
-                                <div class="aspect-square bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl mb-3 flex items-center justify-center">
-                                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                                        <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full"></div>
-                                    </div>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Web Design</h3>
-                                <p class="text-sm text-gray-600">Digital Experience</p>
-                            </div>
-                        </div>
-                        <div class="space-y-4 pt-8">
-                            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-float" style="animation-delay: 0.4s">
-                                <div class="aspect-square bg-gradient-to-br from-orange-400 to-red-400 rounded-xl mb-3 flex items-center justify-center">
-                                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                                        <div class="w-8 h-8 bg-gradient-to-r from-orange-600 to-red-600 rounded-lg transform rotate-45"></div>
-                                    </div>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Print Design</h3>
-                                <p class="text-sm text-gray-600">Marketing Materials</p>
-                            </div>
-                            <div class="bg-white rounded-2xl p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 animate-float" style="animation-delay: 0.6s">
-                                <div class="aspect-square bg-gradient-to-br from-green-400 to-teal-400 rounded-xl mb-3 flex items-center justify-center">
-                                    <div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
-                                        <div class="w-8 h-8 bg-gradient-to-r from-green-600 to-teal-600 rounded-full border-4 border-white"></div>
-                                    </div>
-                                </div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Branding</h3>
-                                <p class="text-sm text-gray-600">Visual Identity</p>
-                            </div>
-                        </div>
-                    </div>
+    <section class="video-section">
+        <div class="container">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/33iMouZm5Uc" 
+                        width="800" 
+                        height="450" 
+                        frameborder="0" 
+                        allowfullscreen
+                        title="Professional Video Content">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4" id="aboutTitle">
-                    About Msofe Designer
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" id="aboutDescription">
-                    We are passionate designers dedicated to creating exceptional visual experiences that tell your unique story.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-                <!-- Image -->
-                <div class="relative">
-                    <div class="aspect-square rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
-                        <div class="w-64 h-64 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center text-white">
-                            <div class="text-center">
-                                <div class="text-6xl font-bold mb-2">MD</div>
-                                <div class="text-lg">Design Studio</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Floating Elements -->
-                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full animate-bounce-custom"></div>
-                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse-custom"></div>
+    <section class="features" id="about">
+        <div class="container">
+            <h2 style="text-align: center; color: white; font-size: 2.5rem; margin-bottom: 1rem;">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Fast Performance</h3>
+                    <p>Lightning-fast solutions that deliver results when you need them most.</p>
                 </div>
-
-                <!-- Content -->
-                <div class="space-y-6">
-                    <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-2xl">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Our Story</h3>
-                        <p class="text-gray-600 mb-4">
-                            Founded with a passion for exceptional design, Msofe Designer has been creating visual experiences that captivate and inspire. Our journey began with a simple belief: great design has the power to transform businesses and connect people.
-                        </p>
-                        <p class="text-gray-600">
-                            Today, we continue to push creative boundaries while maintaining our commitment to quality, innovation, and client satisfaction.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <div class="text-3xl font-bold text-purple-600 mb-2">50+</div>
-                            <div class="text-sm text-gray-600">Projects Completed</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <div class="text-3xl font-bold text-blue-600 mb-2">30+</div>
-                            <div class="text-sm text-gray-600">Happy Clients</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <div class="text-3xl font-bold text-pink-600 mb-2">3+</div>
-                            <div class="text-sm text-gray-600">Years Experience</div>
-                        </div>
-                        <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
-                            <div class="text-sm text-gray-600">Client Satisfaction</div>
-                        </div>
-                    </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Your data and privacy are our top priority with enterprise-grade security.</p>
                 </div>
-            </div>
-
-            <!-- Values Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="target" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Mission</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Our mission is to transform ideas into compelling visual narratives that resonate with your audience.
-                    </p>
-                </div>
-                <div class="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="eye" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Vision</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        We envision a world where every brand has a distinctive identity that reflects its true essence.
-                    </p>
-                </div>
-                <div class="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="heart" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Values</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Our values are creativity, excellence, and client satisfaction.
-                    </p>
-                </div>
-                <div class="group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="award" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Excellence</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        We strive for excellence in every project we undertake.
-                    </p>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Innovative Solutions</h3>
+                    <p>Cutting-edge technology and creative approaches to solve complex challenges.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4" id="servicesTitle">
-                    Our Services
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" id="servicesDescription">
-                    Comprehensive design solutions tailored to your needs
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Logo Design -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="palette" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Logo Design</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Create memorable brand identities that stand out in the marketplace.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mr-3"></div>
-                            Custom Logo Design
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mr-3"></div>
-                            Brand Guidelines
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mr-3"></div>
-                            Multiple Formats
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mr-3"></div>
-                            Unlimited Revisions
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                        <button class="w-full bg-gradient-to-r from-purple-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-                    
-                </div>
-
-                <!-- Brand Identity -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Brand Identity</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Develop cohesive brand systems that communicate your values effectively.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mr-3"></div>
-                            Brand Strategy
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mr-3"></div>
-                            Visual Identity
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mr-3"></div>
-                            Color Palette
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mr-3"></div>
-                            Typography
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                    <button class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-
-                </div>
-
-                <!-- Business Cards -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="credit-card" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Business Cards</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Professional business cards that make lasting first impressions.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full mr-3"></div>
-                            Professional Design
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full mr-3"></div>
-                            Print Ready
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full mr-3"></div>
-                            Multiple Layouts
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-pink-500 to-pink-600 rounded-full mr-3"></div>
-                            Premium Materials
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                    <button class="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-                </div>
-
-                <!-- Social Media Graphics -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="share-2" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Social Media Graphics</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Eye-catching graphics optimized for all social media platforms.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-green-500 to-green-600 rounded-full mr-3"></div>
-                            Social Templates
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-green-500 to-green-600 rounded-full mr-3"></div>
-                            Brand Consistency
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-green-500 to-green-600 rounded-full mr-3"></div>
-                            Multiple Platforms
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-green-500 to-green-600 rounded-full mr-3"></div>
-                            Content Planning
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                    <button class="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-                    
-                </div>
-
-                <!-- Web Design -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="monitor" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Web Design</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Modern, responsive websites that engage and convert visitors.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></div>
-                            Responsive Design
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></div>
-                            User Experience
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></div>
-                            Modern Interface
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full mr-3"></div>
-                            SEO Optimized
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                    <button class="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-
-                </div>
-
-                <!-- Print Design -->
-                <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                    <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <i data-lucide="printer" class="w-8 h-8 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Print Design</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        High-quality print materials from flyers to large format displays.
-                    </p>
-                    <ul class="space-y-3 mb-6">
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mr-3"></div>
-                            High Quality
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mr-3"></div>
-                            Various Formats
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mr-3"></div>
-                            Fast Turnaround
-                        </li>
-                        <li class="flex items-center text-sm text-gray-600">
-                            <div class="w-2 h-2 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mr-3"></div>
-                            Professional Finish
-                        </li>
-                    </ul>
-                    <a href="#contact">
-                    <button class="w-full bg-gradient-to-r from-teal-500 to-teal-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-                        Learn More
-                    </button>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- Process Section -->
-            <div class="mt-20">
-                <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Process</h3>
-                    <p class="text-lg text-gray-600">A systematic approach to delivering exceptional results</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
-                            01
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Discovery</h4>
-                        <p class="text-gray-600">Understanding your needs and vision</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
-                            02
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Design</h4>
-                        <p class="text-gray-600">Creating initial concepts and iterations</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
-                            03
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Refine</h4>
-                        <p class="text-gray-600">Perfecting details based on feedback</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
-                            04
-                        </div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Deliver</h4>
-                        <p class="text-gray-600">Final files and ongoing support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Feed Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Latest from @msofedesigner
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Follow our creative journey and see our latest design work across social media
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <!-- Instagram Post -->
-                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Social media post" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
-                            <div class="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="instagram" class="w-4 h-4 text-white"></i>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <a href="https://instagram.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-gray-700 text-sm mb-3 line-clamp-3">
-                            Just completed this amazing logo design for a local restaurant! 🎨✨
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <span>❤️ 127</span>
-                            <span>💬 23</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Facebook Post -->
-                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Social media post" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
-                            <div class="w-8 h-8 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center">
-                                <i data-lucide="facebook" class="w-4 h-4 text-white"></i>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <a href="https://facebook.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-gray-700 text-sm mb-3 line-clamp-3">
-                            Brand identity package for a tech startup. Clean, modern, and memorable! 💼
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <span>❤️ 89</span>
-                            <span>💬 15</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Twitter Post -->
-                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Social media post" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
-                            <div class="w-8 h-8 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full flex items-center justify-center">
-                                <i data-lucide="twitter" class="w-4 h-4 text-white"></i>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <a href="https://twitter.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-gray-700 text-sm mb-3 line-clamp-3">
-                            Working on some exciting business card designs. The details make all the difference! 📇
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <span>❤️ 45</span>
-                            <span>💬 8</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Instagram Post 2 -->
-                <div class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                    <div class="relative overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Social media post" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-                        <div class="absolute top-3 left-3">
-                            <div class="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-                                <i data-lucide="instagram" class="w-4 h-4 text-white"></i>
-                            </div>
-                        </div>
-                        <div class="absolute top-3 right-3">
-                            <a href="https://instagram.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors">
-                                <i data-lucide="external-link" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <p class="text-gray-700 text-sm mb-3 line-clamp-3">
-                            Social media graphics that convert! Helping businesses grow their online presence 📱
-                        </p>
-                        <div class="flex items-center justify-between text-sm text-gray-500">
-                            <span>❤️ 156</span>
-                            <span>💬 31</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Social Media Links -->
-            <div class="text-center">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Follow Us on Social Media</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://instagram.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-3 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-xl font-medium hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
-                        <span>Instagram</span>
-                    </a>
-                    <a href="https://facebook.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-xl font-medium hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
-                        <span>Facebook</span>
-                    </a>
-                    <a href="https://twitter.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="group flex items-center space-x-3 bg-gradient-to-r from-blue-400 to-blue-500 text-white px-6 py-3 rounded-xl font-medium hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                        <span>Twitter</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>a
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4" id="contactTitle">
-                    Get In Touch
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto" id="contactDescription">
-                    Ready to bring your vision to life? Let's discuss your project.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Contact Methods -->
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Get in Touch</h3>
-                    
-                    <!-- Email -->
-                    <a href="mailto:msofedesigner@gmail.com" class="group block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center">
-                            <div class="w-14 h-14 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="mail" class="w-7 h-7 text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Email Us</h4>
-                                <p class="text-purple-600 font-medium mb-1">msofedesigner@gmail.com</p>
-                                <p class="text-sm text-gray-500">Send us an email for detailed inquiries</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Phone -->
-                    <a href="tel:+255688010595" class="group block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center">
-                            <div class="w-14 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="phone" class="w-7 h-7 text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Call Us</h4>
-                                <p class="text-purple-600 font-medium mb-1">+255 688 010 595</p>
-                                <p class="text-sm text-gray-500">Call us for immediate assistance</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- WhatsApp -->
-                    <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center">
-                            <div class="w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                                <p class="text-purple-600 font-medium mb-1">+255 794 557 333</p>
-                                <p class="text-sm text-gray-500">Quick chat on WhatsApp</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Telegram -->
-                    <a href="https://t.me/msofedesigner" target="_blank" rel="noopener noreferrer" class="group block bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                        <div class="flex items-center">
-                            <div class="w-14 h-14 bg-gradient-to-r from-blue-400 to-blue-500 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                                <i data-lucide="send" class="w-7 h-7 text-white"></i>
-                            </div>
-                            <div class="flex-1">
-                                <h4 class="text-lg font-semibold text-gray-900 mb-1">Telegram</h4>
-                                <p class="text-purple-600 font-medium mb-1">@msofedesigner</p>
-                                <p class="text-sm text-gray-500">Connect with us on Telegram</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Office Info -->
-                    <div class="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-purple-600 mr-3"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Office Location</h4>
-                        </div>
-                        <p class="text-gray-600 mb-4"> Morogoro, Tanzania</p>
-                        
-                        <div class="flex items-center mb-4">
-                            <i data-lucide="clock" class="w-6 h-6 text-purple-600 mr-3"></i>
-                            <h4 class="text-lg font-semibold text-gray-900">Working Hours</h4>
-                        </div>
-                        <div class="space-y-2">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Monday - Thursday</span>
-                                <span class="text-gray-900 font-medium">8:30 AM - 5:00 PM</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Friday </span>
-                                <span class="text-gray-900 font-medium"> 8:30 AM - 12:30 PM </span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Saturday</span>
-                                <span class="text-gray-900 font-medium">10:00 AM - 2:00 PM (Remote)</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Sunday</span>
-                                <span class="text-gray-900 font-medium">Closed</span>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Quick Action Buttons -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <a href="tel:+255688010595" class="bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-6 rounded-xl font-semibold text-center hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105">
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-green-600 to-green-700 text-white py-4 px-6 rounded-xl font-semibold text-center hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105">
-                            WhatsApp Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h3>
-                    
-                    <div id="formStatus" class="hidden mb-6 p-4 rounded-lg flex items-center">
-                        <i data-lucide="check-circle" class="w-5 h-5 mr-3"></i>
-                        <span>Message sent successfully!</span>
-                    </div>
-                    
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Full Name *
-                            </label>
-                            <input type="text" name="name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" placeholder="John Doe" required>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Email Address *
-                            </label>
-                            <input type="email" name="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" placeholder="john@example.com" required>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Phone Number
-                            </label>
-                            <input type="tel" name="phone" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" placeholder="+255 123 456 789">
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Service Needed
-                            </label>
-                            <select name="service" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
-                                <option value="">Select a service</option>
-                                <option value="logo-design">Logo Design</option>
-                                <option value="brand-identity">Brand Identity</option>
-                                <option value="web-design">Web Design</option>
-                                <option value="print-design">Print Design</option>
-                                <option value="social-media">Social Media Graphics</option>
-                                <option value="business-cards">Business Cards</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                Project Description *
-                            </label>
-                            <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200" placeholder="Tell us about your project..." required></textarea>
-                        </div>
-
-                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Main Footer Content -->
-            <div class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="lg:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg mr-3">
-                            MD
-                        </div>
-                        <div>
-                            <div class="text-xl font-bold">Msofe Designer</div>
-                            <div class="text-sm text-gray-400">Where vision meets reality</div>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 mb-6 max-w-md">
-                        Creating exceptional designs that inspire and engage.
-                    </p>
-                    
-                    <!-- Social Media Links -->
-                    <div class="mb-6">
-                        <h4 class="text-lg font-semibold mb-3">Follow Us @msofedesigner</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://facebook.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 transform hover:scale-110">
-                                <i data-lucide="facebook" class="w-5 h-5"></i>
-                            </a>
-                            <a href="https://instagram.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 transform hover:scale-110">
-                                <i data-lucide="instagram" class="w-5 h-5"></i>
-                            </a>
-                            <a href="https://twitter.com/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 transform hover:scale-110">
-                                <i data-lucide="twitter" class="w-5 h-5"></i>
-                            </a>
-                            <a href="https://linkedin.com/company/msofedesigner" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 transform hover:scale-110">
-                                <i data-lucide="linkedin" class="w-5 h-5"></i>
-                            </a>
-                            <a href="https://youtube.com/@msofedesigner" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 transform hover:scale-110">
-                                <i data-lucide="youtube" class="w-5 h-5"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Quick Contact Buttons -->
-                    <div class="flex flex-wrap gap-3">
-                        <a href="tel:+255688010595" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300">
-                            Call Now
-                        </a>
-                        <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300">
-                            WhatsApp
-                        </a>
-                        <a href="mailto:msofedesigner@gmail.com" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300">
-                            Email Now
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-200">Home</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-200">About</a></li>
-                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors duration-200">Services</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-200">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center">
-                            <i data-lucide="mail" class="w-4 h-4 text-purple-400 mr-3 flex-shrink-0"></i>
-                            <a href="mailto:msofedesigner@gmail.com" class="text-gray-400 hover:text-white transition-colors text-sm">
-                                msofedesigner@gmail.com
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i data-lucide="phone" class="w-4 h-4 text-purple-400 mr-3 flex-shrink-0"></i>
-                            <a href="tel:+255688010595" class="text-gray-400 hover:text-white transition-colors text-sm">
-                                +255 688 010 595
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i data-lucide="message-circle" class="w-4 h-4 text-purple-400 mr-3 flex-shrink-0"></i>
-                            <a href="https://wa.me/255794557333" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors text-sm">
-                                +255 794 557 333
-                            </a>
-                        </div>
-                        <div class="flex items-center">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-purple-400 mr-3 flex-shrink-0"></i>
-                            <span class="text-gray-400 text-sm">Morogoro - Tanzania</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bottom Footer -->
-            <div class="py-6 border-t border-gray-800">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">
-                        © <span id="currentYear"></span> Msofe Designer. All rights reserved.
-                    </p>
-                    <!-- Footer Section -->
-<div class="flex space-x-6 mt-4 md:mt-0">
-    <!-- Privacy Policy Trigger -->
-    <a href="#" onclick="openModal('privacyModal')" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
-
-    <!-- Terms of Service Trigger -->
-    <a href="#" onclick="openModal('termsModal')" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
-
-    <span class="text-gray-400 text-sm">@msofedesigner</span>
-</div>
-
-<!-- Privacy Policy Modal -->
-<div id="privacyModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
-        <button onclick="closeModal('privacyModal')" class="absolute top-2 right-2 text-gray-600 hover:text-black">✖</button>
-        <h2 class="text-xl font-semibold mb-4">Privacy Policy</h2>
-        <p class="text-gray-700 text-sm leading-relaxed">
-            At <strong>Msofe Designer</strong>, your privacy is important.  
-            I only collect minimal information such as your name, email, and project details when you contact me.  
-            This information is used only to provide design services and will never be sold, shared, or misused.  
-        </p>
-        <p class="text-gray-700 text-sm leading-relaxed mt-2">
-            I may use cookies to improve website performance. You are free to disable them in your browser settings.  
-            By using this site, you agree to this Privacy Policy.
-        </p>
-    </div>
-</div>
-
-<!-- Terms of Service Modal -->
-<div id="termsModal" class="hidden fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
-        <button onclick="closeModal('termsModal')" class="absolute top-2 right-2 text-gray-600 hover:text-black">✖</button>
-        <h2 class="text-xl font-semibold mb-4">Terms of Service</h2>
-        <p class="text-gray-700 text-sm leading-relaxed">
-            By using this website and my services, you agree to the following:  
-        </p>
-        <ul class="list-disc list-inside text-gray-700 text-sm leading-relaxed mt-2">
-            <li>All designs created remain the property of <strong>Msofe Designer</strong> until full payment is made.</li>
-            <li>Clients must provide accurate project details to ensure quality work.</li>
-            <li>Final designs should not be used for unlawful or unethical purposes, in accordance with Islamic values.</li>
-            <li>I reserve the right to update these terms at any time without prior notice.</li>
-        </ul>
-        <p class="text-gray-700 text-sm leading-relaxed mt-2">
-            If you have any questions, kindly contact me directly.
-        </p>
-    </div>
-</div>
-
-<!-- Modal Script -->
-<script>
-function openModal(id) {
-    document.getElementById(id).classList.remove("hidden");
-}
-function closeModal(id) {
-    document.getElementById(id).classList.add("hidden");
-}
-</script>
-
-                    <!-- <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-200">Terms of Service</a>
-                        <span class="text-gray-400 text-sm">@msofedesigner</span>
-                    </div> -->
-                </div>
-            </div>
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 YourBrand. All rights reserved. | Contact us: info@yourbrand.com</p>
         </div>
     </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <div id="whatsappChat" class="hidden mb-4 bg-white rounded-2xl shadow-2xl p-4 w-80 max-w-sm animate-fadeInUp">
-            <div class="flex items-center justify-between mb-3">
-                <div class="flex items-center">
-                    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mr-3">
-                        <i data-lucide="message-circle" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-semibold text-gray-900">Msofe Designer</h4>
-                        <p class="text-sm text-green-500">Online</p>
-                    </div>
-                </div>
-                <button onclick="toggleWhatsAppChat()" class="text-gray-400 hover:text-gray-600 transition-colors">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <p class="text-gray-600 text-sm mb-4">
-                Hi there! 👋 How can we help you with your design needs today?
-            </p>
-            <a href="https://wa.me/255794557333?text=Hello! I'm interested in your design services." target="_blank" rel="noopener noreferrer" class="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-xl font-medium transition-colors duration-300 flex items-center justify-center">
-                <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
-                Start Chat
-            </a>
-        </div>
-        
-        <button onclick="toggleWhatsAppChat()" class="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 animate-pulse-custom">
-            <i data-lucide="message-circle" class="w-6 h-6" id="whatsappIcon"></i>
-        </button>
-    </div>
-
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Set current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Language functionality
-        let currentLanguage = 'en';
-        
-        const translations = {
-            en: {
-                heroTitle: 'Msofe Designer',
-                heroSlogan: 'Let us design your future',
-                heroTagline: 'Where vision meets reality',
-                heroDescription: 'Professional graphic design services to elevate your brand and bring your creative visions to life.',
-                getStarted: 'Get Started',
-                viewPortfolio: 'View Portfolio',
-                aboutTitle: 'About Msofe Designer',
-                aboutDescription: 'We are passionate designers dedicated to creating exceptional visual experiences that tell your unique story.',
-                servicesTitle: 'Our Services',
-                servicesDescription: 'Comprehensive design solutions tailored to your needs',
-                contactTitle: 'Get In Touch',
-                contactDescription: 'Ready to bring your vision to life? Let\'s discuss your project.'
-            },
-            sw: {
-                heroTitle: 'Msofe Designer',
-                heroSlogan: 'Hebu tuunde mustakabali wako',
-                heroTagline: 'Mahali maono yanakutana na ukweli',
-                heroDescription: 'Huduma za kitaaluma za kubuni michoro ili kuinua chapa yako na kuleta maono yako ya ubunifu kuwa maishani.',
-                getStarted: 'Anza Sasa',
-                viewPortfolio: 'Tazama Kazi Zetu',
-                aboutTitle: 'Kuhusu Msofe Designer',
-                aboutDescription: 'Sisi ni wabuni wenye shauku waliojitoa kuunda uzoefu wa kipekee wa kuona ambao unasimulia hadithi yako ya kipekee.',
-                servicesTitle: 'Huduma Zetu',
-                servicesDescription: 'Suluhisho kamili za kubuni zilizobinafsishwa kwa mahitaji yako',
-                contactTitle: 'Wasiliana Nasi',
-                contactDescription: 'Uko tayari kuleta maono yako kuwa maishani? Hebu tuzungumze kuhusu mradi wako.'
-            }
-        };
-
-        function setLanguage(lang) {
-            currentLanguage = lang;
-            document.getElementById('currentLang').textContent = lang.toUpperCase();
-            
-            // Update text content
-            Object.keys(translations[lang]).forEach(key => {
-                const element = document.getElementById(key);
-                if (element) {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            
-            // Hide language dropdown
-            document.getElementById('languageDropdown').classList.add('hidden');
-        }
-
-        function toggleLanguage() {
-            const dropdown = document.getElementById('languageDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-
-        // Mobile menu functionality
-        let isMobileMenuOpen = false;
-
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const menuIcon = document.getElementById('menuIcon');
-            
-            isMobileMenuOpen = !isMobileMenuOpen;
-            
-            if (isMobileMenuOpen) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.setAttribute('data-lucide', 'x');
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-            }
-            
-            // Reinitialize icons
-            lucide.createIcons();
-        }
-
-        // WhatsApp chat functionality
-        let isWhatsAppChatOpen = false;
-
-        function toggleWhatsAppChat() {
-            const chat = document.getElementById('whatsappChat');
-            const icon = document.getElementById('whatsappIcon');
-            
-            isWhatsAppChatOpen = !isWhatsAppChatOpen;
-            
-            if (isWhatsAppChatOpen) {
-                chat.classList.remove('hidden');
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                chat.classList.add('hidden');
-                icon.setAttribute('data-lucide', 'message-circle');
-            }
-            
-            // Reinitialize icons
-            lucide.createIcons();
-        }
-
-        // Contact form functionality
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const phone = formData.get('phone');
-            const service = formData.get('service');
-            const message = formData.get('message');
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Create mailto link
-            const subject = `New Project Inquiry from ${name}`;
-            const body = `
-Name: ${name}
-Email: ${email}
-Phone: ${phone}
-Service Needed: ${service}
-
-Message:
-${message}
-            `;
-            
-            const mailtoLink = `mailto:msofedesigner@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            const formStatus = document.getElementById('formStatus');
-            formStatus.classList.remove('hidden');
-            formStatus.classList.add('bg-green-50', 'border', 'border-green-200');
-            formStatus.querySelector('span').textContent = 'Message sent successfully!';
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Close dropdowns when clicking outside
-        document.addEventListener('click', function(e) {
-            const languageDropdown = document.getElementById('languageDropdown');
-            const languageButton = e.target.closest('[onclick="toggleLanguage()"]');
-            
-            if (!languageButton && !languageDropdown.contains(e.target)) {
-                languageDropdown.classList.add('hidden');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-                
-                // Close mobile menu if open
-                if (isMobileMenuOpen) {
-                    toggleMobileMenu();
-                }
-            });
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('bg-white/95');
-                header.classList.remove('bg-white/90');
-            } else {
-                header.classList.add('bg-white/90');
-                header.classList.remove('bg-white/95');
-            }
-        });
-    </script>
 </body>
 </html>
